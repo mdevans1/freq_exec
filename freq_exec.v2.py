@@ -31,10 +31,9 @@ score_data = {}
 files = [ join(path,f) for f in listdir(path) if isfile(join(path,f)) ]
 
 def compute_probability(filename):
-	f = open(filename, 'read')
-	score = fc.probability(f.read())
-	f.close()
-	return filename, score
+        with open(filename, 'r') as f:
+                score = fc.probability(f.read())
+        return filename, score
 
 #multiprocess our frequency comparison
 pool = mp.Pool(processes=8)
