@@ -139,9 +139,9 @@ Example: counter._probability("q","u") - Will tell you the chance that U will fo
     print self
 
   def save(self,filename):
-    """Saves the raw python data structure from the file specified.  Save and Load are used to write the data structure to disk so you can come back to it later or exchange them with other developers.
+    """Saves the raw python data structure to the file specified.  Save and Load are used to write the data structure to disk so you can come back to it later or exchange them with other developers.
 Example:
-counter.save("/home/user/savedfreqcounter.txt") - save the data structure from disk.
+counter.save("savedfreqcounter.txt") - save the data structure to disk.
 """
     try:
         file_handle =  open(filename, 'wb')
@@ -156,7 +156,7 @@ counter.save("/home/user/savedfreqcounter.txt") - save the data structure from d
   def load(self,filename):
     """Loads the raw python data structure from the file specified. Load is using the raw data structures. Save and Load are used to write the data structure to disk so you can come back to it later or exchange them with other developers.  This is not the same as tallyfile.  Tallyfile analyzes a files character frequencies.
 Example:
-counter.load("/home/user/savedfreqcounter.txt") - Loads the data structure from disk.
+counter.load("savedfreqcounter.txt") - Loads the data structure from disk.
 """
     try:
         file_handle = open(filename, 'rb')
