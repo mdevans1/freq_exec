@@ -198,7 +198,7 @@ def main():
     parser.add_argument('-o','--odd',required=False,help='Update the table based on the contents of the odd string. It is not a good idea to use this on random data',dest='odd')
     parser.add_argument('-p','--print',action='store_true',required=False,help='Print a table of the most likely letters in order',dest='printtable')
     parser.add_argument('-c','--create',action='store_true',required=False,help='Create a new empty frequency table',dest='create')
-    parser.add_argument('-t','--toggle_case_sensitivity',action='store_true',required=False,help='Ignore case in all future frequecy tabulations',dest='toggle_case')
+    parser.add_argument('-t','--toggle_case_sensitivity',action='store_true',required=False,help='Ignore case in all future frequency tabulations',dest='toggle_case')
     parser.add_argument('-M','--max_prob',required=False,default=40,type=int,help='Defines the maximum probability of any character combo. (Prevents "qu" from overpowering stats) Default 40',dest='max_prob')
     parser.add_argument('-P','--promote',required=False,nargs=2,help='This takes 2 characters as arguments.  Given the 2 characters, promote the likelihood of the 2nd in the first by <weight> places',dest='promotelist')
     parser.add_argument('-w','--weight',type=int,default = 1, required=False,help='Affects weight of promote, update and update file (default is 1)',dest='weight')
